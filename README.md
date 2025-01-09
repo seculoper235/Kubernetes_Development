@@ -17,6 +17,8 @@
 
 * [Kubernetes 사용환경 정리?](https://velog.io/@seculoper235/Kubernetes-%EC%82%AC%EC%9A%A9-%EB%8F%84%EA%B5%AC-%EC%A0%95%EB%A6%AC%EC%9E%91%EC%84%B1%EC%A4%91)
 
+* [Kubernetes 구성요소](https://velog.io/@seculoper235/Kubernetes-%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C%EC%9E%91%EC%84%B1%EC%A4%91)
+
 
 ---
 ## 😁 As-Is
