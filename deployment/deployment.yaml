@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-1
+  labels:
+    app: deployment-1
+spec:
+  # 동일한 파드를 몇개 유지할지 정한다
+  replicas: 1
+
+  ## SELECTOR(Required) ##
+  # 컨트롤 오브젝트는 자신이 관리하는 오브젝트를 레이블을 통해 인식하게 된다
+  # matchLabels에 해당하는 오브젝트만을 관리하게 된다
+  selector:
+    matchLabels:
+      app: deployment-pod-1
+
+  ## TEMPLATE(Required) ##
+  # 파드를 어떻게 만들지 틀을 설정하는 부분
+  # 작성 방식은 Pod와 동일하지만, 어디까지나 template 이기 때문에 metadata에 name 필드가 없고 레이블을 지정해야 한다
+  template:
+    metadata:
+      labels:
+        app: deployment-pod-1
+
+    spec:
+      containers:
+        - name: deployment-pod-1
+          image: nginx
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+      restartPolicy: Always
+      
