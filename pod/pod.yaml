@@ -18,4 +18,3 @@ spec:
   containers:
     - name: nginx-pod-1
       image: nginx
-  
