@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-1
+spec:
+  selector:
+    app: service-1
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  # 서비스가 외부로 노출(exposed)될 방식을 지정한다
+  # ExternalName, ClusterIP, NodePort, and LoadBalancer 값이 가능하며, 기본값은 ClusterIP 이다
+  # ClusterIP
+  # 클러스터 내부에서 쓰이는 private IP를 부여하는 방식. 즉 클러스터 범위의 사설망이라고 보면 된다
+  # NodePort
+  # 각 노드의 특정 포트(NodePort)에 서비스를 연결하는 방식. 노드가 인식할 수 있어야하기에 ClusterIP 방식으로 private IP를 부여한다
+  # LoadBalancer
+  # 말 그대로 클라우드 서비스의 로드밸런서를 통해 서비스를 노출시키는 방식
+  # ExternalName
+  # 설정한 값(외부 도메인)으로 서비스를 연결하는 방식. 외부에 모두 떠넘기기에 별다른 설정이 필요없다.
+  type: NodePort
+  
