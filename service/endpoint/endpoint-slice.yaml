@@ -1,0 +1,19 @@
+apiVersion: discovery.k8s.io/v1
+kind: EndpointSlice
+metadata:
+  # 보통 이름을 정할 때 암묵적으로 {서비스 이름}-??? 라고 작성한다고 한다
+  name: endpoint-service-1
+  labels:
+    # "kubernetes.io/service-name" 레이블을 서비스의 이름과 동일하게 설정해야 한다
+    # 그래야 서비스와 연결되어 작동한다
+    kubernetes.io/service-name: endpoint-service
+addressType: IPv4
+ports:
+  - name: ''
+    appProtocol: http
+    protocol: TCP
+    port: 80
+endpoints:
+  # 관리하고픈 오브젝트들의 주소를 적어준다
+  - addresses:
+      - "{서비스 주소}"

@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-base-deployment
+  labels:
+    app: service-base-deployment
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: service-base-deployment-pod
+
+  template:
+    metadata:
+      labels:
+        app: service-base-deployment-pod
+
+    spec:
+      containers:
+        - name: deployment-pod-2
+          image: nginx
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+      restartPolicy: Always

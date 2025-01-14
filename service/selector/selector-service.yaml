@@ -1,0 +1,13 @@
+## Selector SERVICE ##
+# 해당 서비스는 Selector를 지정한 서비스 오브젝트로, 아래처럼 레이블이 일치하는 파드들을 찾아 엔드포인트 슬라이스를 생성하고 연결해준다
+apiVersion: v1
+kind: Service
+metadata:
+  name: selector-service
+spec:
+  selector:
+    app: service-base-deployment-pod
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

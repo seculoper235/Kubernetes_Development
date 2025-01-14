@@ -1,0 +1,11 @@
+## Endpoint SERVICE ##
+# 해당 서비스는 Endpoint를 직접 지정한 서비스 오브젝트로, Selector를 작성하지 않고 관리하고픈 오브젝트들을 담은 Endpoint 오브젝트를 작성해준다
+apiVersion: v1
+kind: Service
+metadata:
+  name: endpoint-service
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
