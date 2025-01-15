@@ -1,0 +1,14 @@
+## ClusterIP SERVICE ##
+# 클러스터 내부에서 쓰이는 private IP를 부여하는 방식. 즉 클러스터 범위의 사설망이라고 보면 된다
+# default 값이기 때문에 별다른 설정이 필요없다
+apiVersion: v1
+kind: Service
+metadata:
+  name: clusterip-service
+spec:
+  selector:
+    app: service-base-deployment-pod
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
