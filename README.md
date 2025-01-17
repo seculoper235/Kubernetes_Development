@@ -22,6 +22,8 @@
 
 * [Service 란?](https://velog.io/@seculoper235/Kubernetes-Service-%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EB%9E%80)
 
+* [ConfigMap과 Secret 이란?](https://velog.io/@seculoper235/Kubernetes-ConfigMap%EA%B3%BC-Secret)
+
 
 ---
 ## 😁 As-Is
