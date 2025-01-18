@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-map-1
+data:
+  # kv format
+  key: "value"
+  actual-config-file: "name.properties"
+
+  # ‘|’ 기호는 값이 여러줄일 때 개행을 어떻게 처리할지를 나타내는 기호이다
+  # ‘|+’는 그대로 개행 처리하겠다는 뜻이고 ‘|-’는 개행을 없애라는 뜻이다. 기본 값은 ‘|-’이다
+
+  # file format
+  name.properties: |
+    field=value1,value2
+
+  # Text format(Json)
+  # json은 단순 문자열이므로 개행이 없다
+  config.json: |-
+    {
+      "ConfigController": {
+        "Enabled" : true
+      }
+    }
