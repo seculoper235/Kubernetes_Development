@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: host-path-deployment-1
+  labels:
+    app: host-path
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: host-path
+
+  template:
+    metadata:
+      labels:
+        app: host-path
+
+    spec:
+      volumes:
+        - name: host-path-volume
+          hostPath:
+            path: /
+            type: Directory
+        - name: local-volume
+          persistentVolumeClaim:
+            claimName: local-persistent-claim
+      containers:
+        - name: host-path-pod-1
+          image: nginx
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /Volumes/Data
+              name: host-path-volume
+            - name: local-volume
+              mountPath: /local/volumes
+      restartPolicy: Always
