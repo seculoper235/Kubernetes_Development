@@ -4,7 +4,7 @@
 - Kubernetes로 다양한 인프라 모델을 구축해보기 위한 저장소입니다
 - 다음의 2가지 책과 공식 홈페이지를 참조하며 정리하였습니다
   - 쿠버네티스 교과서
-  - 컨테이너 인프라 환경 구축을 위한 쿠버내티스/도커
+  - 컨테이너 인프라 환경 구축을 위한 쿠버네티스/도커
   - 공식 홈페이지(https://kubernetes.io/ko/)
 
 
@@ -24,10 +24,15 @@
 
 * [ConfigMap과 Secret 이란?](https://velog.io/@seculoper235/Kubernetes-ConfigMap%EA%B3%BC-Secret)
 
+* [Volume 이란?](https://velog.io/@seculoper235/Kubernetes-Volume-%EC%9D%B4%EB%9E%80)
+
+* [PV, PVC에 대해](https://velog.io/@seculoper235/Kubernetes-PV-PVC-%EB%B6%84%EB%A5%98)
+
+* [StorageClass와 동적 프로비저닝](https://velog.io/@seculoper235/Kubernetes-PV-PVC-%EB%B6%84%EB%A5%98)
+
 
 ---
 ## 😁 As-Is
-
 
 ---
 ## 💡 To-Be
