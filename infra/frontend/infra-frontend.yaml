@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: infra-frontend
+  labels:
+    app: infra-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: infra-frontend
+  template:
+    metadata:
+      name: infra-frontend
+      labels:
+        app: infra-frontend
+    spec:
+      containers:
+        - name: infra-frontend
+          image: infra-frontend:1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+      restartPolicy: Always
+      
