@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: infra-backend
+  labels:
+    app: infra-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: infra-backend
+  template:
+    metadata:
+      name: infra-backend
+      labels:
+        app: infra-backend
+    spec:
+      containers:
+        - name: infra-backend
+          image: infra-backend:1.0
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - secretRef:
+                name: infra-secret
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+      restartPolicy: Always
+      
