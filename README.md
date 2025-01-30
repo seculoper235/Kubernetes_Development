@@ -30,12 +30,16 @@
 
 * [StorageClass와 동적 프로비저닝](https://velog.io/@seculoper235/Kubernetes-PV-PVC-%EB%B6%84%EB%A5%98)
 
+* [데몬셋 이란?](https://velog.io/@seculoper235/Kubernetes-DeamonSet-%EC%9D%B4%EB%9E%80)
+
 
 ---
 ## 😁 As-Is
 * 단일 노드 쿠버네티스 서비스 구축하기([관련 설정 참조](infra/description.md))
 ---
 ## 💡 To-Be
+* 로깅 시스템 구축하기
+
 * 2개 이상의 API 서비스를 제공하는 서비스 구축하기
 
 
