@@ -32,6 +32,10 @@
 
 * [데몬셋 이란?](https://velog.io/@seculoper235/Kubernetes-DeamonSet-%EC%9D%B4%EB%9E%80)
 
+* [로그 관리를 해보자 - 로깅 전략 분석](https://velog.io/@seculoper235/Kubernetes-%EB%A1%9C%EA%B7%B8-%EA%B4%80%EB%A6%AC%EB%A5%BC-%ED%95%B4%EB%B3%B4%EC%9E%90-1%ED%8E%B8)
+
+* [로그 관리를 해보자 - ELK 란?](https://velog.io/@seculoper235/Kubernetes-%EB%A1%9C%EA%B7%B8-%EA%B4%80%EB%A6%AC%EB%A5%BC-%ED%95%B4%EB%B3%B4%EC%9E%90-ELK-%EB%9E%80%EC%9E%91%EC%84%B1%EC%A4%91)
+
 
 ---
 ## 😁 As-Is
