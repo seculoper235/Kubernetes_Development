@@ -1,22 +1,28 @@
-# Single Node Cluster Infra Service
+Single Node Cluster Infra Service
 ---
 ## 개요
 - todo-list 기능을 가진 웹 서비스이다
 - **단일 노드 클러스터 환경(로컬)**의 쿠버네티스 서비스이다
-- 다음의 3가지가 준비되어 있어야 한다
-    - infra-frontend 이미지
-    - infra-backend 이미지
+- 다음의 서비스가 존재한다
+    - Web Service
+    - Todo Service
     - 별도의 DB 서버
+    - 로깅 시스템
 
 ---
-## 📝 infra-frontend Image
+## 📝 Web Service Image
 다음 git 저장소의 README.md 참고\
 **https://github.com/seculoper235/infra-test-web**
 
 ---
-## 📝 infra-backend Image / DB 서버
+## 📝 Todo Service Image / DB 서버
 다음 git 저장소의 README.md 참고\
 **https://github.com/seculoper235/infra-test-api**
+---
+
+## 📝 로깅 시스템
+관련 README.md 참고
+([관련 설정 참조](logging/description.md))
 ---
 
 ## 📝 쿠버네티스 배포

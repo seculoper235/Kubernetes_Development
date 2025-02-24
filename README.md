@@ -50,11 +50,10 @@
 ---
 ## 😁 As-Is
 * 단일 노드 쿠버네티스 서비스 구축하기([관련 설정 참조](infra/description.md))
+
+* 로깅 시스템 구축하기([관련 설정 참조](infra/logging/description.md))
 ---
 ## 💡 To-Be
-* 로깅 시스템 구축하기
-
 * 2개 이상의 API 서비스를 제공하는 서비스 구축하기
-
 
 * MSA 구축해보기
