@@ -1,0 +1,63 @@
+apiVersion: logstash.k8s.elastic.co/v1alpha1
+kind: Logstash
+metadata:
+  name: logstash
+spec:
+  count: 1
+  elasticsearchRefs:
+    - name: elasticsearch
+      clusterName: rancher-desktop
+  version: 8.17.2
+  pipelines:
+    - pipeline.id: front
+      config.string: |
+        input {
+          beats {
+            port => 5043
+          }
+        }
+        output {
+          elasticsearch {
+            index => "web-service-%{+YYYY.MM.dd}"
+            hosts => [ "${RANCHER_DESKTOP_ES_HOSTS}" ]
+            user => "${RANCHER_DESKTOP_ES_USER}"
+            password => "${RANCHER_DESKTOP_ES_PASSWORD}"
+            ssl_certificate_authorities => "${RANCHER_DESKTOP_ES_SSL_CERTIFICATE_AUTHORITY}"
+            codec => json {
+                      charset => "UTF-8"
+            }
+          }
+        }
+    - pipeline.id: back
+      config.string: |
+        input {
+          beats {
+            port => 5044
+          }
+        }
+        output {
+          elasticsearch {
+            index => "todo-service-%{+YYYY.MM.dd}"
+            hosts => [ "${RANCHER_DESKTOP_ES_HOSTS}" ]
+            user => "${RANCHER_DESKTOP_ES_USER}"
+            password => "${RANCHER_DESKTOP_ES_PASSWORD}"
+            ssl_certificate_authorities => "${RANCHER_DESKTOP_ES_SSL_CERTIFICATE_AUTHORITY}"
+            codec => json {
+                      charset => "UTF-8"
+            }
+          }
+        }
+  services:
+    - name: beats
+      service:
+        spec:
+          type: NodePort
+          ports:
+            - port: 5043
+              name: "front-filebeat"
+              protocol: TCP
+              targetPort: 5043
+            - port: 5044
+              name: "back-filebeat"
+              protocol: TCP
+              targetPort: 5044
