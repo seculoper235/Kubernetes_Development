@@ -7,6 +7,13 @@
   - 컨테이너 인프라 환경 구축을 위한 쿠버네티스/도커
   - 공식 홈페이지(https://kubernetes.io/ko/)
 
+---
+## 🌟 관련 서비스
+* 웹 서비스(Frontend) - https://github.com/seculoper235/infra-test-web
+
+* 투두 리스트 서비스 - https://github.com/seculoper235/infra-test-api
+
+* 포스트 서비스 - https://github.com/seculoper235/infra-post-service
 
 ---
 ## 📝 관련 작성글
