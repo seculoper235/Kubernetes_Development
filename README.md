@@ -59,8 +59,8 @@
 * 단일 노드 쿠버네티스 서비스 구축하기([관련 설정 참조](infra/description.md))
 
 * 로깅 시스템 구축하기([관련 설정 참조](infra/logging/description.md))
+  
+* 2개 이상의 API 서비스를 제공하는 서비스(MSA) 구축하기(해당 문서의 [관련 서비스](https://github.com/seculoper235/Kubernetes_Development/edit/master/README.md#-%EA%B4%80%EB%A0%A8-%EC%84%9C%EB%B9%84%EC%8A%A4) 참조)
 ---
 ## 💡 To-Be
-* 2개 이상의 API 서비스를 제공하는 서비스 구축하기
-
-* MSA 구축해보기
+* 인증 API 서비스 및 API Gateway 구축하기
